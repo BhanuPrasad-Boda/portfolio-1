@@ -60,7 +60,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-100 d-flex justify-content-center align-items-center">
-          <img className="rounded-circle" width={200} src="./images/pic.jpg" alt="Description" />
+          <img className="rounded-circle" width={200} src="./images/Img.png" alt="Description" />
         </div>
       </div>
       <Typewriter />
