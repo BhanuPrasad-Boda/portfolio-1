@@ -1,0 +1,38 @@
+.project{
+    border: 2px solid cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    
+    background-color: rgb(159, 159, 122);
+}.projects{
+    margin-top: 30vh;
+}a{
+    text-decoration: none;
+    color: black;
+}span{
+    font-size: larger;
+    font-weight: bold;
+}.project:hover{
+    border: 2px solid rgba(0, 242, 255, 0.879);
+     
+}.b1 div{
+    background-color: lightblue;
+    border-radius: 50%;
+    margin: 2vw;
+
+    padding-left: 60%;
+    padding-right: 60%;
+}.b2 div{
+    background-color: lightblue;
+    border-radius: 50%;
+    margin: 2vw;
+    padding-left: 60%;
+    padding-right: 60%;
+
+
+}.b1{
+    transform: translateX(5%);
+}.b2{
+    transform: translateX(-5%);
+}
