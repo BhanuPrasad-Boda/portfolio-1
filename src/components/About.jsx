@@ -30,7 +30,7 @@ export default function About(){
             <h3 className='d-flex justify-content-center'>About Me</h3>
             
             <div className='w-75'>
-                            <p className=''>Hi, I’m Anu, a passionate React Developer. I enjoy
+                            <p className=''>Hi, I’m Bhanuprasad Boda, a passionate React Developer. I enjoy
             building clean and user-friendly web experiences,
             with skills in HTML, CSS, JavaScript and React.</p>
 
