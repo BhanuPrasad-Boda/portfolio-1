@@ -1,41 +1,118 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}Link{
+/* Remove underline from links */
+Link {
   text-decoration: none;
   color: inherit;
 }
+
+/* Main About container */
+.about {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.dark-mode p {
+  color: #eee !important;
+}
+
+/* Heading */
+.about h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Text width */
+.about .w-75 {
+  max-width: 800px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.a1 div,
+.a2 div {
+  background-color: red;
+  padding: 12px;
+  border-radius: 12px;
+  width: 120px;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.a1 div:hover,
+.a2 div:hover {
+  background-color: rgb(200, 0, 0);
+}
+
+/* Container arrangement */
+.a1,
+.a2 {
+  margin-top: 10px;
+}
+
+/* -------------------- Responsive -------------------- */
+
+@media (max-width: 768px) {
+
+  /* Make whole layout vertical */
+  .about {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .about .w-75 {
+    width: 100% !important;
+    padding: 5px;
+  }
+
+  /* Buttons stack vertically */
+  .a1,
+  .a2 {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .a1 div,
+  .a2 div {
+    width: 90% !important;
+  }
+}
+.about {
+  background-color: #FFFDD0;  /* Cream */
+  min-height: 100vh;
+}
+/* Sun / Moon icon position */
+.bi {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
+}
+/* For all 4 navigation buttons */
+/* Oval red buttons */
+.about a div {
+  background-color: #e63946;   /* Red color */
+  color: white;
+  padding: 12px 0;
+  border-radius: 40px;         /* Oval shape */
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: none;            /* No hover shadow */
+  text-align: center;
+}
+
+

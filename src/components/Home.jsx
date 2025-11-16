@@ -40,30 +40,48 @@ export default function Home() {
 
 
 
-  return (
-    <div className={`home ${mode} `}>
-      <div className={` ${sample} p-2`} onClick={handleclick}></div>
-      <div className="w-100 container-fluid d-flex justify-content-between">
+ return (
+  <div className={`home ${mode} `}>
+    <div className={` ${sample} p-2`} onClick={handleclick}></div>
+
+    <div className="w-100 container-fluid d-flex justify-content-between flex-wrap">
+
+      {/* IMAGE */}
+      <div className="w-100 d-flex img justify-content-center align-items-center section-image">
+        <img className="rounded-circle" width={200} src="./images/Img.png" alt="Description" />
+      </div>
+
+      {/* TYPEWRITER */}
+      <div className="section-typewriter w-100 d-flex justify-content-center">
+        <Typewriter />
+      </div>
+
+      {/* BUTTONS */}
+      <div className="w-100 d-flex justify-content-center align-items-center section-buttons">
+        <div className="container w-50">
         
-        <div className="w-100 d-flex justify-content-center align-items-center">
-            
-          <div className="container w-50">
-            
-            <div className="row r1 d-flex justify-content-center align-items-end">
-              <Link to='/about' className='ab1'><div className="col-6 d-flex justify-content-center">About</div></Link>
-              <Link to='/skills' className='ab1'><div className="col-6 d-flex justify-content-center">Skills</div></Link>
-            </div>
-            <div className="row r2 ">
-              <Link to='/projects' className='ab'><div className="col-6 d-flex justify-content-center">Projects</div></Link>
-              <Link to='/contact' className='ab'><div className="col-6 d-flex justify-content-center">Contact</div></Link>
-            </div>
+          <div className="row r1 d-flex justify-content-center align-items-end">
+            <Link to='/about' className='ab1'>
+              <div className="col-6 d-flex justify-content-center">About</div>
+            </Link>
+            <Link to='/skills' className='ab1'>
+              <div className="col-6 d-flex justify-content-center">Skills</div>
+            </Link>
           </div>
-        </div>
-        <div className="w-100 d-flex img justify-content-center align-items-center">
-          <img className="rounded-circle" width={200} src="./images/Img.png" alt="Description" />
+
+          <div className="row r2">
+            <Link to='/projects' className='ab'>
+              <div className="col-6 d-flex justify-content-center">Projects</div>
+            </Link>
+            <Link to='/contact' className='ab'>
+              <div className="col-6 d-flex justify-content-center">Contact</div>
+            </Link>
+          </div>
+
         </div>
       </div>
-      <Typewriter />
+
     </div>
-  );
+  </div>
+)
 }

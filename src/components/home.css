@@ -4,48 +4,136 @@
     padding-right: 8vh;
     background-color: red;
 }
+
 .r1 div{
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-    
     width: 100%;
 }
+
 .r2 div{
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     width: 100%;
 }
+
 .dark-mode {
-    background-color: #222 !important ;
-    color: #fff !important ;
+    background-color: #222 !important;
+    color: #fff !important;
     min-height: 100vh;
     min-width: 10vw;
-   
 }
-.dark-mode .col-6{
-    background-color: #777 ;
-    color: #fff ;
+
+.dark-mode .col-6 {
+    background-color: #777;
+    color: #fff;
     border: 1px solid white;
-}.home{
+}
+
+.home {
     background-color: lightcyan;
     width: 100vw;
-    height:100vh;
-    
-}.dark-mode .contact-info h3 {
+    height: 100vh;
+}
+
+.dark-mode .contact-info h3 {
     color: #111 !important;
-}Link{
+}
+
+Link {
     text-decoration: none;
-}.r1{
+}
+
+.r1 {
     transform: translateX(5%);
-}.r2{
+}
+
+.r2 {
     transform: translateX(-5%);
-}.ab{
+}
+
+.ab {
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
     margin: 10px;
-}.ab1{
+}
+
+.ab1 {
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     margin: 20px;
     transform: translateX(30%);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                      MOBILE RESPONSIVE DESIGN                                        */
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Main container becomes vertical */
+    .container-fluid.d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
+
+    /* --- Order Change --- */
+    .section-image {
+        order: 1;
+    }
+
+    .section-typewriter {
+        order: 2;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .section-buttons {
+        order: 3;
+        margin-top: 20px;
+    }
+
+    /* Make height flexible */
+    .home {
+        height: auto !important;
+        padding-bottom: 30px;
+    }
+
+    /* Buttons stack vertically */
+    .row {
+        flex-direction: column !important;
+        gap: 12px;
+    }
+
+    .col-6 {
+        width: 90% !important;
+        padding: 15px !important;
+        margin: auto;
+    }
+
+    /* Remove horizontal shifting */
+    .r1, .r2 {
+        transform: none !important;
+    }
+
+    .ab, .ab1 {
+        margin: 10px auto !important;
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Left container full width */
+    .container.w-50 {
+        width: 100% !important;
+    }
+
+    /* Image resize */
+    .img img {
+        width: 130px !important;
+        height: auto;
+        margin-top: 20px !important;
+    }
 }

@@ -1,52 +1,103 @@
-.card{
-    height: 30%;
-    width:fit-content ;
-    padding: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-   
-    margin: 10px;
-    box-shadow: 5px 5px 0px grey;
-}.card-header,.card-footer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}.cards{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}h4{
-    font-style: italic;
-    font-size:xx-large;
-    color:#6D28D9
+/* ------------------------------------- */
+/* Sun / Moon Toggle Icon                */
+/* ------------------------------------- */
+.bi {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
 }
-    
 
 
-
-.card:hover{
-   transform: scale(1.2);
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.655);
-}.c1 div{
-    background-color: lightblue;
-    border-radius: 50%;
-    margin: 2vw;
-
-    padding-left: 60%;
-    padding-right: 60%;
+/* ------------------------------------- */
+/* Page Heading                           */
+/* ------------------------------------- */
+h4 {
+  font-style: italic;
+  font-size: xx-large;
+  color: #6D28D9;
+  text-align: center;
+  margin-top: 60px;
 }
-.c2 div{
-    background-color: lightblue;
-    border-radius: 50%;
-    margin: 2vw;
-    padding-left: 60%;
-    padding-right: 60%;
 
-}.c1{
-    transform: translateX(5%);
-}.c2{
-    transform: translateX(-5%);
+
+/* ------------------------------------- */
+/* Skill Cards                            */
+/* ------------------------------------- */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  width: 160px;
+  background: white;
+  box-shadow: 5px 5px 0px grey;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.card-header,
+.card-footer {
+  font-weight: bold;
+  padding: 8px;
+}
+
+
+/* ------------------------------------- */
+/* Bottom Buttons (Sky Blue Oval Shape)  */
+/* ------------------------------------- */
+.c1 div,
+.c2 div {
+  background-color: #87CEEB;        /* Sky Blue */
+  color: #111;                      /* Dark readable text */
+  border-radius: 40px;              /* Oval shape */
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  width: 35vw;                      /* Laptop size */
+  text-align: center;
+  margin: 12px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.c1,
+.c2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+/* ------------------------------------- */
+/* Mobile Responsive Layout              */
+/* ------------------------------------- */
+@media (max-width: 768px) {
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 140px;
+  }
+
+  .c1 div,
+  .c2 div {
+    width: 80vw;                    /* Full width on mobile */
+    border-radius: 35px;
+  }
+}
+/* Restore card hover effect */
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
 }

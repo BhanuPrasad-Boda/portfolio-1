@@ -1,12 +1,27 @@
-/* Full screen container */
+/* Fix icon overlapping */
+.theme-icon {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 1000;
+}
+
+/* Page container */
+.contact-page {
+  min-height: 100vh;
+}
+
+/* Main container */
 .contact-container {
   width: 100%;
-  padding: 40px 20px; /* inner spacing */
+  padding: 40px 20px;
   box-sizing: border-box;
   text-align: center;
 }
 
-/* Title and subtitle */
+/* Titles */
 .contact-title {
   font-size: 28px;
   margin-bottom: 10px;
@@ -17,16 +32,16 @@
   margin-bottom: 30px;
 }
 
-/* Flex container for form + info */
+/* Flex layout */
 .contact-content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  width: 100%; /* full width */
+  width: 100%;
 }
 
-/* Contact Form */
+/* Contact form design */
 .contact-form {
   flex: 1;
   min-width: 300px;
@@ -43,7 +58,7 @@
   outline: none;
   font-size: 16px;
   transition: 0.3s;
-  width: 100%; /* full width */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -67,7 +82,7 @@
   background: #0056b3;
 }
 
-/* Contact Info */
+/* Right side contact info box */
 .contact-info {
   flex: 1;
   min-width: 250px;
@@ -77,12 +92,52 @@
   text-align: left;
 }
 
-/* Responsive adjustments */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column;
   }
+
   .contact-info {
     text-align: center;
   }
+
+  .contact-form-left {
+    margin-right: 0 !important;
+  }
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .contact-info {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode a {
+  color: #00eaff;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #bbb;
+}
+
+.dark-mode .contact-form button {
+  background: #00bcd4;
+}
+
+.dark-mode .contact-form button:hover {
+  background: #0097a7;
 }
