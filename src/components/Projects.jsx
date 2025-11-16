@@ -43,7 +43,7 @@ export default function Projects() {
             that allows users to calculate BMI.
           </div>
           <a
-            href="https://bmi-drab-seven.vercel.app/"
+            href="https://bmi-nine-taupe.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
