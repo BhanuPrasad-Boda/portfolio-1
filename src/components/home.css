@@ -1,139 +1,226 @@
-.col-6 {
-    margin-top: 0px;
-    padding-left: 8vh;
-    padding-right: 8vh;
-    background-color: red;
-}
-
-.r1 div{
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    width: 100%;
-}
-
-.r2 div{
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 100%;
-}
-
-.dark-mode {
-    background-color: #222 !important;
-    color: #fff !important;
+/* ----------------------- BASE STYLING ----------------------- */
+.home {
+    width: 100vw;
     min-height: 100vh;
-    min-width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Multi-color animated gradient */
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #6e8efb, #a777e3, #fddb92, #d1fdff);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    -webkit-background-size: 400% 400%;
+    -webkit-animation: gradientBG 20s ease infinite;
+    transition: background 0.5s, color 0.5s;
 }
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(-45deg, #222, #444, #555, #333, #666, #444, #222, #555);
+    background-size: 400% 400%;
+    animation: gradientBGDark 20s ease infinite;
+    -webkit-background-size: 400% 400%;
+    -webkit-animation: gradientBGDark 20s ease infinite;
+    color: #fff;
+}
+
+/* Toggle icon */
+.toggle-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+
+.dark-mode .toggle-icon { color: #fff; }
+
+/* ----------------------- HERO SECTION ----------------------- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    z-index: 1; /* above background */
+}
+
+/* Hero image */
+.section-image {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn 1s forwards;
+}
+
+.section-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.section-image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* ----------------------- TYPEWRITER ----------------------- */
+.section-typewriter {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    display: inline-block;
+}
+
+.dark-mode .section-typewriter { color: #fff; }
+
+/* Cursor */
+.cursor {
+    display: inline;
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* ----------------------- BUTTONS ----------------------- */
+.section-buttons {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.col-6 {
+    flex: 0 1 auto;
+    min-width: 120px;
+    max-width: 200px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: buttonAppear 0.5s forwards;
+}
+
+.col-6:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb347, #ffcc33);
+    background-size: 400% 400%;
+    animation: gradientHover 3s ease infinite;
+    transform: scale(1.05);
+}
+
+.col-6:nth-child(1) { animation-delay: 0.2s; }
+.col-6:nth-child(2) { animation-delay: 0.4s; }
+.col-6:nth-child(3) { animation-delay: 0.6s; }
+.col-6:nth-child(4) { animation-delay: 0.8s; }
 
 .dark-mode .col-6 {
-    background-color: #777;
+    background: linear-gradient(135deg, #555, #777);
     color: #fff;
-    border: 1px solid white;
 }
 
-.home {
-    background-color: lightcyan;
-    width: 100vw;
-    height: 100vh;
+/* ----------------------- ANIMATIONS ----------------------- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
-.dark-mode .contact-info h3 {
-    color: #111 !important;
+@keyframes buttonAppear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-Link {
-    text-decoration: none;
+@keyframes gradientHover {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.r1 {
-    transform: translateX(5%);
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.r2 {
-    transform: translateX(-5%);
+/* Gradient background animation keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.ab {
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    margin: 10px;
+@keyframes gradientBGDark {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.ab1 {
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    margin: 20px;
-    transform: translateX(30%);
-}
-
-
-/* ---------------------------------------------------------------------------------------------------- */
-/*                                      MOBILE RESPONSIVE DESIGN                                        */
-/* ---------------------------------------------------------------------------------------------------- */
-
+/* ----------------------- MOBILE ----------------------- */
 @media (max-width: 768px) {
-
-    /* Main container becomes vertical */
-    .container-fluid.d-flex {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px;
-    }
-
-    /* --- Order Change --- */
-    .section-image {
-        order: 1;
-    }
-
-    .section-typewriter {
-        order: 2;
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .section-buttons {
-        order: 3;
-        margin-top: 20px;
-    }
-
-    /* Make height flexible */
-    .home {
-        height: auto !important;
-        padding-bottom: 30px;
-    }
-
-    /* Buttons stack vertically */
-    .row {
-        flex-direction: column !important;
-        gap: 12px;
-    }
+    .container.w-50 { width: 90% !important; }
 
     .col-6 {
-        width: 90% !important;
-        padding: 15px !important;
-        margin: auto;
+        flex: 1 1 100%;
+        max-width: 100%;
+        white-space: normal;
+        padding: 12px 20px;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 0.5s forwards;
     }
 
-    /* Remove horizontal shifting */
-    .r1, .r2 {
-        transform: none !important;
-    }
+    .col-6:active { transform: scale(0.95); transition: transform 0.1s; }
 
-    .ab, .ab1 {
-        margin: 10px auto !important;
-        transform: none !important;
-        display: flex;
-        justify-content: center;
-    }
+    .col-6:nth-child(1) { animation-delay: 0.2s; }
+    .col-6:nth-child(2) { animation-delay: 0.4s; }
+    .col-6:nth-child(3) { animation-delay: 0.6s; }
+    .col-6:nth-child(4) { animation-delay: 0.8s; }
 
-    /* Left container full width */
-    .container.w-50 {
-        width: 100% !important;
-    }
+    .section-image img { width: 130px; height: 130px; }
+    .section-typewriter { font-size: 1rem; }
+    .section-buttons { margin-top: 20px; }
+    .toggle-icon { font-size: 1.5rem; top: 15px; right: 15px; }
 
-    /* Image resize */
-    .img img {
-        width: 130px !important;
-        height: auto;
-        margin-top: 20px !important;
+    /* Increase gradient speed on mobile */
+    .home, .dark-mode {
+        animation-duration: 10s !important;
+        -webkit-animation-duration: 10s !important;
     }
+}
+
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
 }
