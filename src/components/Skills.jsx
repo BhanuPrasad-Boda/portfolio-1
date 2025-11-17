@@ -3,71 +3,81 @@ import '../components/skills.css';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
-export default function Skills(){
-
+export default function Skills() {
   const [sample, setSample] = useState('bi bi-sun');
-   const [mode, setMode] = useState('');
+  const [mode, setMode] = useState('');
+  const [activeCard, setActiveCard] = useState(null);
 
-
-       function handleclick(e){
+  function handleclick(e) {
     if(sample==='bi bi-sun'){
       setSample('bi bi-moon-fill')
       setMode('dark-mode')
-    }else{
+    } else {
       setSample('bi bi-sun')
       setMode('')
     }
   }
 
+  const cards = [
+    { name: "HTML", img: "./images/html.png", percent: "90%" },
+    { name: "CSS", img: "./images/css.jpeg", percent: "85%" },
+    { name: "JavaScript", img: "./images/js.jpeg", percent: "80%" },
+    { name: "React", img: "./images/react.jpeg", percent: "75%" },
+  ];
 
-    return(
-        <motion.div  className={`${mode}  container-fluid`} >
-            <div className={` ${sample} p-2`} onClick={handleclick}></div>
-            <h4 className="d-flex justify-content-center container-fluid">Technical Skills</h4>
-            <div className="cards  d-flex  justify-content-around">
-                <div className="card">
-                    <div className="card-header bg-danger">HTML</div>
-                    <div className='card-body'><img src="./images/html.png" alt='HTML' width={100} /></div>
-                    <div className="card-footer">90%</div>
-                </div>
-                <div className="card">
-                    <div className="card-header bg-primary w-100">CSS</div>
-                    <div className='card-body'><img src="./images/css.jpeg" alt='CSS' width={90} height={100} /></div>
-                    <div className="card-footer">85%</div>
-                </div>
-               
-                
+  return (
+    <motion.div 
+      className={`${mode} skills-bg  `} 
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+
+      <motion.h4
+        className="d-flex skills-heading justify-content-center container-fluid"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        Technical Skills
+      </motion.h4>
+
+      <div className="cards">
+        {cards.map((card, index) => (
+          <motion.div
+            key={index}
+            className={`card ${activeCard === index ? 'active' : ''}`}
+            onMouseEnter={() => setActiveCard(index)}
+            onMouseLeave={() => setActiveCard(null)}
+            onClick={() => setActiveCard(index)}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 + index * 0.2 }}
+          >
+            <div className="card-header">{card.name}</div>
+            <div className="card-body">
+              <img src={card.img} alt={card.name} />
             </div>
-            <div className="cards  d-flex  justify-content-around">
-                <div className="card">
-                    <div className="card-header bg-warning">JavaScript</div>
-                    <div className='card-body'><img src="./images/js.jpeg" alt='JavaScript' width={100} height={100} /></div>
-                    <div className="card-footer">80%</div>
-                </div>
-                <div className="card">
-                    <div className="card-header bg-info">React</div>
-                    <div className='card-body'><img src="./images/react.jpeg" alt='React' width={90} height={100} /></div>
-                    <div className="card-footer bg-info">75%</div>
-                </div>
-               
+            <div className="card-footer">{card.percent}</div>
+          </motion.div>
+        ))}
+      </div>
 
-            </div>
-            <div className='container  w-100'>
-                    <div className=' d-flex c1 justify-content-around'>
-                        <Link className="link" to='/'><div className='col-6   d-flex justify-content-center'>Home</div></Link>
-                        <Link className="link" to='/about'><div className='col-6   d-flex justify-content-center'>About</div></Link>
-                    </div>
-                    <div className='d-flex c2 justify-content-around'>
-                        <Link className="link" to='/projects'><div className='col-6   d-flex justify-content-center'>Projects</div></Link>
-                        <Link className="link" to='/contact'><div className='col-6  d-flex justify-content-center'>Contact</div></Link>
-                    </div>
-                </div>
-
-        </motion.div>
-    )
+      <motion.div
+        className='container w-100'
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+      >
+        <div className='d-flex c1 justify-content-around'>
+          <Link className="link" to='/'><div className='nav-btn'>Home</div></Link>
+          <Link className="link" to='/about'><div className='nav-btn'>About</div></Link>
+        </div>
+        <div className='d-flex c2 justify-content-around'>
+          <Link className="link" to='/projects'><div className='nav-btn'>Projects</div></Link>
+          <Link className="link" to='/contact'><div className='nav-btn'>Contact</div></Link>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
 }

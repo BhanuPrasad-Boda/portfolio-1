@@ -3,7 +3,17 @@ import '../components/home.css';
 import { Link } from 'react-router-dom';
 
 function Typewriter() {
-  const fullText = "Hello Everyone! I am Bhanuprasad Boda Passionate Frontend Developer.";
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) 
+        return "Good Morning! 🌞 I am Bhanuprasad Boda, Passionate Frontend Developer.";
+    else if (hour >= 12 && hour < 16) 
+        return "Good Afternoon! 🌤 I am Bhanuprasad Boda, Passionate Frontend Developer.";
+    else 
+        return "Good Evening! 🌇 I am Bhanuprasad Boda, Passionate Frontend Developer.";
+  }
+
+  const fullText = getGreeting();
   const [displayedText, setDisplayedText] = useState('');
   const typingSpeed = 100;
 
@@ -31,32 +41,32 @@ export default function Home() {
   const [mode, setMode] = useState('');
 
   function handleclick() {
-    if(sample==='bi bi-sun'){
-      setSample('bi bi-moon-fill')
-      setMode('dark-mode')
+    if(sample === 'bi bi-sun'){
+      setSample('bi bi-moon-fill');
+      setMode('dark-mode');
     } else {
-      setSample('bi bi-sun')
-      setMode('')
+      setSample('bi bi-sun');
+      setMode('');
     }
   }
 
   return (
     <div className={`home ${mode}`}>
-      {/* Dark mode toggle */}
-      <div className={`toggle-icon ${sample}`} onClick={handleclick}></div>
+      
+
 
       <div className="hero-section container-fluid d-flex justify-content-center flex-wrap">
-        {/* IMAGE */}
+        
         <div className="section-image w-100 d-flex justify-content-center align-items-center">
-          <img className="rounded-circle" src="./images/Img.png" alt="Profile" />
+          <img className="rounded-circle" src="./images/image.png " alt="Profile" />
         </div>
 
-        {/* TYPEWRITER */}
+       
         <div className="section-typewriter w-100 d-flex justify-content-center">
           <Typewriter />
         </div>
 
-        {/* BUTTONS */}
+        
         <div className="section-buttons w-100 d-flex justify-content-center align-items-center">
           <div className="button-container container w-50">
             <Link to='/about'><div className="col-6">About</div></Link>
@@ -67,5 +77,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-/* ----------------------- BASE STYLING ----------------------- */
+
 .home {
     width: 100vw;
     min-height: 100vh;
@@ -9,7 +9,7 @@
     position: relative;
     overflow: hidden;
 
-    /* Multi-color animated gradient */
+
     background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #6e8efb, #a777e3, #fddb92, #d1fdff);
     background-size: 400% 400%;
     animation: gradientBG 20s ease infinite;
@@ -18,7 +18,6 @@
     transition: background 0.5s, color 0.5s;
 }
 
-/* Dark Mode */
 .dark-mode {
     background: linear-gradient(-45deg, #222, #444, #555, #333, #666, #444, #222, #555);
     background-size: 400% 400%;
@@ -28,7 +27,7 @@
     color: #fff;
 }
 
-/* Toggle icon */
+
 .toggle-icon {
     position: absolute;
     top: 20px;
@@ -41,17 +40,17 @@
 
 .dark-mode .toggle-icon { color: #fff; }
 
-/* ----------------------- HERO SECTION ----------------------- */
+
 .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: center;
-    z-index: 1; /* above background */
+    z-index: 1;
 }
 
-/* Hero image */
+
 .section-image {
     opacity: 0;
     transform: translateY(-50px);
@@ -62,6 +61,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    margin: 20px;
     object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -74,7 +74,7 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* ----------------------- TYPEWRITER ----------------------- */
+
 .section-typewriter {
     font-size: 1.2rem;
     font-weight: 500;
@@ -84,7 +84,7 @@
 
 .dark-mode .section-typewriter { color: #fff; }
 
-/* Cursor */
+
 .cursor {
     display: inline;
     margin-left: 2px;
@@ -96,7 +96,7 @@
     25%, 75% { opacity: 0; }
 }
 
-/* ----------------------- BUTTONS ----------------------- */
+
 .section-buttons {
     margin-top: 30px;
     width: 100%;
@@ -114,7 +114,7 @@
     min-width: 120px;
     max-width: 200px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #6e8efb, #a777e3, #fcd7b6, #fbc2eb);
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -144,7 +144,7 @@
     color: #fff;
 }
 
-/* ----------------------- ANIMATIONS ----------------------- */
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -171,7 +171,7 @@
     }
 }
 
-/* Gradient background animation keyframes */
+
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 50%; }
@@ -188,7 +188,7 @@
     100% { background-position: 0% 50%; }
 }
 
-/* ----------------------- MOBILE ----------------------- */
+
 @media (max-width: 768px) {
     .container.w-50 { width: 90% !important; }
 
@@ -214,7 +214,7 @@
     .section-buttons { margin-top: 20px; }
     .toggle-icon { font-size: 1.5rem; top: 15px; right: 15px; }
 
-    /* Increase gradient speed on mobile */
+
     .home, .dark-mode {
         animation-duration: 10s !important;
         -webkit-animation-duration: 10s !important;
