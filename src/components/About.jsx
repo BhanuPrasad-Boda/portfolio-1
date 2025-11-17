@@ -40,16 +40,13 @@ export default function About() {
                 </p>
             </div>
 
-            <div className='button-container'>
-                <div className='a1'>
-                    <Link to='/'><button>Home</button></Link>
-                    <Link to='/skills'><button>Skills</button></Link>
-                </div>
-                <div className='a2'>
-                    <Link to='/projects'><button>Projects</button></Link>
-                    <Link to='/contact'><button>Contact</button></Link>
-                </div>
-            </div>
+<div className='button-container'>
+    <Link to='/'><button>Home</button></Link>
+    <Link to='/skills'><button>Skills</button></Link>
+    <Link to='/projects'><button>Projects</button></Link>
+    <Link to='/contact'><button>Contact</button></Link>
+</div>
+
         </motion.div>
     );
 }

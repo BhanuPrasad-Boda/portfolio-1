@@ -61,11 +61,11 @@ const Contact = () => {
 
         
         <div className="nav-buttons d-flex flex-column align-items-center gap-3 mt-4">
-          <Link to="/" className="btn nav-btn">Home</Link>
-          <Link to="/about" className="btn nav-btn">About</Link>
-          <Link to="/skills" className="btn nav-btn">Skills</Link>
-          <Link to="/projects" className="btn nav-btn">Projects</Link>
-          <Link to="/resume" className="btn nav-btn resume-btn">Resume</Link>
+          <Link to="/" className="btn nav-btn"><span>Home</span></Link>
+          <Link to="/about" className="btn nav-btn"><span>About</span></Link>
+          <Link to="/skills" className="btn nav-btn"><span>Skills</span></Link>
+          <Link to="/projects" className="btn nav-btn"><span>Projects</span></Link>
+          <Link to="/resume" className="btn nav-btn resume-btn"><span>Resume</span></Link>
         </div>
 
       </div>

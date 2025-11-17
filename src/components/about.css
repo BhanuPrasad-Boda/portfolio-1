@@ -1,4 +1,3 @@
-
 .about {
     position: relative;
     width: 100vw;
@@ -41,160 +40,6 @@
     z-index: 1;
 }
 
-
-.about h3 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideDown 0.8s forwards;
-}
-
-.about p {
-    max-width: 700px;
-    text-align: justify;
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    border-radius: 15px;
-    background-color: #b0b8c1;
-    color: #222;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.6s forwards;
-}
-
-.dark-mode .about p {
-    background-color: #555;
-    color: #fff;
-}
-
-
-.toggle-icon {
-    position: fixed; /* keep it fixed top-left */
-    top: 20px;
-    left: 20px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
-    width: 100%;
-    align-items: center;
-}
-
-.a1, .a2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.a1 button, .a2 button {
-    min-width: 120px;
-    max-width: 160px;
-    padding: 12px 20px;
-    font-weight: 600;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42f5f5, #f9d423);
-    background-size: 400% 400%;
-    animation: buttonGradient 6s ease infinite;
-    transition: all 0.3s ease;
-}
-
-.a1 button:hover, .a2 button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-.dark-mode .a1 button, .dark-mode .a2 button {
-    background: linear-gradient(135deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
-    animation: buttonGradient 6s ease infinite;
-    color: #fff;
-}
-
-
-@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-@keyframes slideDown { to { opacity: 1; transform: translateY(0); } }
-@keyframes floatBG { 0% { background-position: 0 0; } 100% { background-position: 500px 500px; } }
-@keyframes aboutGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-@keyframes aboutGradientDark { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-@keyframes buttonGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-
-
-@media (max-width: 768px) {
-    .about { padding: 30px 15px; }
-    .about p { padding: 12px 15px; font-size: 0.95rem; }
-    .a1 button, .a2 button { min-width: 80%; max-width: 90%; padding: 14px 0; font-size: 16px; }
-}
-
-@media (max-width: 768px) {
-    .about {
-        padding: 80px 15px 30px 15px; /* extra top padding for sun icon */
-        animation: aboutGradient 15s ease infinite;
-        background-size: 400% 400%;
-    }
-
-    .about h3 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    .about p {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-    }
-
-
-    .a1 button, .a2 button {
-        min-width: 100%;
-        max-width: 95%;
-        padding: 12px 0;
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-
-    .button-container {
-        gap: 15px;
-    }
-}
-
-.bi {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-
-@media (max-width: 768px) {
-    .bi {
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%); 
-        font-size: 24px;
-    }
-
-    .about {
-        padding-top: 70px; 
-    }
-}
-
 .about h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
@@ -223,18 +68,113 @@
     color: #fff;
 }
 
-
 .about p:nth-of-type(1) { animation-delay: 1s; }
 .about p:nth-of-type(2) { animation-delay: 2s; }
 .about p:nth-of-type(3) { animation-delay: 3s; }
 
-
-@keyframes slideUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.toggle-icon {
+    position: fixed; /* keep it fixed top-left */
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 100;
 }
 
-@keyframes slideDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.bi {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .bi {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%); 
+        font-size: 24px;
+    }
+
+    .about {
+        padding-top: 70px; 
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        animation: aboutGradient 15s ease infinite;
+        background-size: 400% 400%;
+    }
+
+    .about h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================= BUTTONS ========================= */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* allows wrapping on small screens */
+    gap: 20px;             /* spacing between buttons */
+    width: 100%;
+    max-width: 700px;      /* optional max width */
+    margin-top: 30px;
+}
+
+.button-container button {
+    flex: 1;               /* all buttons have equal width */
+    min-width: 140px;      /* prevents buttons from being too small */
+    max-width: 160px;      /* prevents buttons from being too large */
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42f5f5, #f9d423);
+    background-size: 400% 400%;
+    animation: buttonGradient 6s ease infinite;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.dark-mode .button-container button {
+    background: linear-gradient(135deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    animation: buttonGradient 6s ease infinite;
+    color: #fff;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes slideUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes slideDown { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes floatBG { 0% { background-position: 0 0; } 100% { background-position: 500px 500px; } }
+@keyframes aboutGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes aboutGradientDark { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes buttonGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+/* ==================== MEDIA QUERY FOR MOBILE BUTTONS ==================== */
+@media (max-width: 768px) {
+    .button-container button {
+        min-width: 120px;
+        max-width: 140px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+    }
 }
