@@ -1,4 +1,4 @@
-
+/* ======================= SKILLS PAGE BACKGROUND ======================= */
 .skills-bg {
   position: relative;
   width: 100%;
@@ -7,31 +7,27 @@
   overflow: hidden;
 }
 
-
-.skills-bg::before {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
-  top: -20%;
-  left: -10%;
-  pointer-events: none;
-  filter: blur(90px);
-  animation: blobMove1 10s infinite ease-in-out alternate;
-}
-
-
+.skills-bg::before,
 .skills-bg::after {
   content: "";
   position: absolute;
   width: 450px;
   height: 450px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.skills-bg::before {
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  top: -20%;
+  left: -10%;
+  animation: blobMove1 10s infinite ease-in-out alternate;
+}
+
+.skills-bg::after {
   background: radial-gradient(circle, #ec4899 0%, transparent 70%);
   bottom: -20%;
   right: -10%;
-  filter: blur(90px);
-  pointer-events: none;
   animation: blobMove2 10s infinite ease-in-out alternate;
 }
 
@@ -45,19 +41,14 @@
   100% { transform: translate(-20%, -20%); }
 }
 
-
+/* ======================= HEADING ======================= */
 .skills-heading {
   text-align: center;
   font-size: 2.6rem;
   font-weight: 800;
-  padding-top: 50px;
-  padding-bottom: 20px;
-
+  padding: 50px 0 20px 0;
   color: #ffcbf2;
-  text-shadow:
-    0 0 10px rgba(255, 203, 242, 0.7),
-    0 0 25px rgba(255, 203, 242, 0.6);
-
+  text-shadow: 0 0 10px rgba(255,203,242,0.7), 0 0 25px rgba(255,203,242,0.6);
   letter-spacing: 2px;
 }
 
@@ -68,10 +59,11 @@
   }
 }
 
-
+/* ======================= CARDS ======================= */
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -89,25 +81,8 @@
   cursor: pointer;
 }
 
-.card-body img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  transition: transform 0.5s ease;
-}
-
-.card-body img:hover {
-  transform: rotate(-10deg) scale(1.1);
-}
-
-.card-header,
-.card-footer {
-  font-weight: bold;
-  padding: 8px;
-}
-
 .card.active {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb347, #ffcc33);
+  background: linear-gradient(135deg, #ffa332, #3efba3, #3292ec, #e1b531);
   background-size: 400% 400%;
   animation: cardGradient 4s ease infinite;
 }
@@ -116,168 +91,10 @@
   transform: scale(1.05);
 }
 
-@keyframes cardGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-.nav-btn {
-  background: linear-gradient(135deg, #6e8efb, #a777e3, #ff758c, #ffb347);
-  background-size: 400% 400%;
-  animation: buttonGradient 6s ease infinite;
-
-  color: #fff;
-  border-radius: 40px;
-
-  padding: 14px 20px;
-  font-size: 17px;
-  font-weight: 600;
-  text-align: center;
-
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  cursor: pointer;
-
-  width: 230px;     
-  height: 55px;     
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 10px auto;
-
-  white-space: nowrap;   
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  transition: 0.3s ease;
-}
-
-.nav-btn:hover {
-  transform: scale(1.05);
-}
-
-@keyframes buttonGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-.c1, .c2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-
-@media (max-width: 768px) {
-  .nav-btn {
-    width: 85vw;     
-    height: 55px;
-    font-size: 16px;
-  }
-
-  .cards {
-    justify-content: center;
-  }
-
-  .card {
-    width: 140px;
-  }
-}
-
-.skills-bg {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: #0f111a;
-  overflow: hidden;
-}
-
-
-.skills-bg::before {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
-  top: -20%;
-  left: -10%;
-  pointer-events: none;
-  filter: blur(90px);
-  animation: blobMove1 10s infinite ease-in-out alternate;
-}
-
-
-.skills-bg::after {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #ec4899 0%, transparent 70%);
-  bottom: -20%;
-  right: -10%;
-  filter: blur(90px);
-  pointer-events: none;
-  animation: blobMove2 10s infinite ease-in-out alternate;
-}
-
-@keyframes blobMove1 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(20%, 20%); }
-}
-
-@keyframes blobMove2 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-20%, -20%); }
-}
-
-
-.skills-heading {
-  text-align: center;
-  font-size: 2.6rem;
-  font-weight: 800;
-  padding-top: 50px;
-  padding-bottom: 20px;
-
-  color: #ffcbf2;
-  text-shadow:
-    0 0 10px rgba(255, 203, 242, 0.7),
-    0 0 25px rgba(255, 203, 242, 0.6);
-
-  letter-spacing: 2px;
-}
-
-@media (max-width: 600px) {
-  .skills-heading {
-    font-size: 2rem;
-    padding-top: 30px;
-  }
-}
-
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.card {
-  width: 160px;
-  background: linear-gradient(135deg, #f3e7e9, #e3eeff);
-  box-shadow: 5px 5px 0px grey;
-  border-radius: 10px;
-  margin: 10px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.card-header,
+.card-footer {
+  font-weight: bold;
+  padding: 8px;
 }
 
 .card-body img {
@@ -291,128 +108,28 @@
   transform: rotate(-10deg) scale(1.1);
 }
 
-.card-header,
-.card-footer {
-  font-weight: bold;
-  padding: 8px;
-}
-
-.card.active {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb347, #ffcc33);
-  background-size: 400% 400%;
-  animation: cardGradient 4s ease infinite;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
 @keyframes cardGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-
-.nav-btn {
-  background: linear-gradient(135deg, #6e8efb, #a777e3, #ff758c, #ffb347);
-  background-size: 400% 400%;
-  animation: buttonGradient 6s ease infinite;
-
-  color: #fff;
-  border-radius: 45px;
-
-  padding: 18px 25px;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-
-  box-shadow: 3px 3px 8px rgba(0,0,0,0.35);
-  cursor: pointer;
-
-  width: 300px;    
-  height: 70px;    
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 12px auto;
-
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-
-  transition: 0.3s ease;
-}
-
-.nav-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .nav-btn {
-    width: 90vw;   
-    height: 70px;
-    font-size: 19px;
-  }
-}
-
-
-.nav-btn:hover {
-  transform: scale(1.05);
-}
-
-@keyframes buttonGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Button containers */
+/* ======================= NAV BUTTONS ======================= */
 .c1, .c2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-
-@media (max-width: 768px) {
-  .nav-btn {
-    width: 85vw;     
-    height: 55px;
-    font-size: 16px;
-  }
-
-  .cards {
-    justify-content: center;
-  }
-
-  .card {
-    width: 140px;
-  }
-}
-
-
-.c1, .c2 {
-  display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 100%;
-  margin:  0;
+  margin: 20px 0 0 0;
   padding: 0;
 }
 
-
 .nav-btn {
-  background: linear-gradient(90deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+  background: linear-gradient(90deg, #35df40, #cbe621, #1e3c72, #d53de3);
   background-size: 400% 400%;
-  animation: buttonGradient 1s ease infinite;
+  animation: buttonGradient 4s ease infinite;
 
   color: #fff;
   border-radius: 50px;
@@ -425,7 +142,7 @@
   font-size: 22px;     
   font-weight: 700;
   text-align: center;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,13 +151,11 @@
   cursor: pointer;
 
   margin: 10px;
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-sizing: border-box;
 }
 
 .nav-btn:hover {
@@ -454,14 +169,32 @@
   100% { background-position: 0% 50%; }
 }
 
-
+/* ======================= RESPONSIVE ======================= */
 @media (max-width: 768px) {
+  .cards {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 140px;
+  }
+
   .nav-btn {
-    width: 90%;        
-    height: 75px;
+    width: 90vw;   
+    height: 70px;
+    font-size: 19px;
     min-width: 90vw;
-    font-size: 20px;
-    margin: 10px 0;
   }
 }
 
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+  }
+  .nav-btn {
+    width: 95%;
+    height: 65px;
+    font-size: 18px;
+  }
+}
