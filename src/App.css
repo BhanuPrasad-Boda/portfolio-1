@@ -41,7 +41,7 @@ Link {
 /* Buttons */
 .a1 div,
 .a2 div {
-  background-color: red;
+  
   padding: 12px;
   border-radius: 12px;
   width: 120px;
@@ -105,7 +105,7 @@ Link {
 /* For all 4 navigation buttons */
 /* Oval red buttons */
 .about a div {
-  background-color: #e63946;   /* Red color */
+    /* Red color */
   color: white;
   padding: 12px 0;
   border-radius: 40px;         /* Oval shape */
