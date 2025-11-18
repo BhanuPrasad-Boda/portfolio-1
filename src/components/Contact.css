@@ -34,8 +34,9 @@
   max-width: 1100px;
   text-align: center;
   position: relative;
-  z-index: 2; /* Above waves */
-  color: rgb(255, 255, 255);
+  z-index: 2;
+  color: #fff;
+
 }
 
 .contact-title {
@@ -50,21 +51,24 @@
   margin-bottom: 30px;
 }
 
+/* ---------------- CONTACT CONTENT ---------------- */
 .contact-content {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;  /* center horizontally */
+  align-items: flex-start;
+  gap: 40px;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 2;
+  width: 100%;
 }
 
+/* ---------------- CONTACT FORM ---------------- */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   flex: 1;
   min-width: 280px;
+  max-width: 450px; /* keeps form compact */
 }
 
 .contact-form input,
@@ -74,7 +78,7 @@
   border-radius: 8px;
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: rgb(255, 255, 255);
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -101,38 +105,41 @@
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
+/* ---------------- CONTACT INFO ---------------- */
 .contact-info {
-  background: rgba(0,0,0,0.25);
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
   padding: 20px;
   border-radius: 8px;
-  min-width: 250px;
-  flex: 1;
-  color: white;
-  text-align: left;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7); 
-  font-style: italic; 
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* ---------------- NAVIGATION BUTTONS ---------------- */
 .nav-buttons {
   display: flex;
-  justify-content: center; /* center all buttons horizontally */
-  gap: 20px;               /* space between buttons */
-  flex-wrap: wrap;          /* wrap on small screens */
-  margin-top: 30px;
+  flex-direction: column;        /* stack vertically */
+  align-items: center;           /* center horizontally */
+  justify-content: center;       /* center vertically inside container if needed */
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;              /* ensures buttons are grouped centrally */
+  margin: 40px auto 0 auto;      /* top margin + center horizontally */
   z-index: 2;
 }
 
 .nav-buttons a {
-  display: flex;               /* make link a flex container */
-  justify-content: center;     /* center text horizontally */
-  align-items: center;         /* center text vertically */
-  width: 150px;                /* fixed width for all buttons */
-  height: 50px;                /* fixed height for all buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;                   /* full width of container */
+  height: 55px;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -156,6 +163,7 @@
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
+/* ---------------- KEYFRAMES ---------------- */
 @keyframes btnGradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -165,26 +173,42 @@
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column;
+    flex-direction: column; /* stack vertically */
     align-items: center;
   }
 
-  .contact-info {
-    text-align: center;
+  .contact-info, .contact-form {
+    max-width: 90%;
   }
 
   .nav-buttons {
-    gap: 15px;
+    max-width: 90%;
+    margin-top: 30px;
   }
 
   .nav-buttons a {
-    width: 70%;
-    max-width: 250px;
+    width: 90%;      /* scale buttons */
+    max-width: 300px;
     font-size: 14px;
   }
 
   .contact-form input,
   .contact-form textarea {
     font-size: 14px;
+  }
+    .contact-content {
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center horizontally */
+  }
+
+  /* Remove any left/right margins that push content */
+  .contact-form-left,
+  .contact-info {
+    margin: 0 !important;
+    max-width: 90%;       /* optional: keep content within screen */
+  }
+
+  .contact-info {
+    text-align: center;   /* center text inside info box */
   }
 }
