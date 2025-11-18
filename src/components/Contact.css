@@ -65,7 +65,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+ row-gap: 15px;
   flex: 1;
   min-width: 280px;
   max-width: 450px; /* keeps form compact */
