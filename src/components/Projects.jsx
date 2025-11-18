@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Projects() {
   return (
     <motion.div
-      className="projects-container container-fluid"
+      className="projects-container "
       initial={{ transform: "translateY(-300px)", opacity: 0 }}
       animate={{ transform: "translateY(0)", opacity: 1 }}
       transition={{ duration: 1 }}

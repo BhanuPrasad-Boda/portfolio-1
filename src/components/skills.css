@@ -114,16 +114,16 @@
   100% { background-position: 0% 50%; }
 }
 
-/* ======================= NAV BUTTONS ======================= */
+/* ======================= NAVIGATION BUTTONS ======================= */
 .c1, .c2 {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* center buttons horizontally */
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  max-width: 100%;
   margin: 20px 0 0 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .nav-btn {
@@ -136,10 +136,7 @@
 
   width: 280px;        
   height: 80px;       
-  min-width: 280px;  
-  min-height: 80px;
-
-  font-size: 22px;     
+  font-size: 22px;
   font-weight: 700;
   text-align: center;
 
@@ -150,12 +147,17 @@
   box-shadow: 3px 3px 10px rgba(0,0,0,0.35);
   cursor: pointer;
 
-  margin: 10px;
+  margin: 0; /* remove individual button margin to prevent misalignment */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btn.resume-btn {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff758c, #ffb347);
+  animation: buttonGradient 7s ease infinite;
 }
 
 .nav-btn:hover {
@@ -181,10 +183,9 @@
   }
 
   .nav-btn {
-    width: 90vw;   
-    height: 70px;
+    width: 85vw;       
+    height: 60px;  
     font-size: 19px;
-    min-width: 90vw;
   }
 }
 
@@ -192,9 +193,10 @@
   .card {
     width: 90%;
   }
+
   .nav-btn {
-    width: 95%;
-    height: 65px;
+    width: 85vw;       
+    height: 55px;  
     font-size: 18px;
   }
 }

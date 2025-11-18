@@ -58,6 +58,8 @@
   gap: 40px;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto; /* ensure centering */
+  box-sizing: border-box;
 }
 
 /* ---------------- CONTACT FORM ---------------- */
@@ -81,16 +83,16 @@
   transition: 0.3s;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #fff;
   outline: none;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6); /* lighter color */
-  font-style: italic;
 }
 
 .contact-form button {
@@ -107,7 +109,7 @@
 
 .contact-form button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
 /* ---------------- CONTACT INFO ---------------- */
@@ -117,21 +119,22 @@
   max-width: 400px;
   padding: 20px;
   border-radius: 8px;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.25);
   color: #fff;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  margin: 0 auto; /* center */
 }
 
 /* ---------------- NAVIGATION BUTTONS ---------------- */
 .nav-buttons {
   display: flex;
-  flex-direction: column;       
-  align-items: center;          
-  justify-content: center;      
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
   width: 100%;
   max-width: 400px;
@@ -148,7 +151,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  border-radius: 30px;
+  border-radius: 30px; /* pill shape */
   color: #fff;
   background: linear-gradient(90deg, #ff6ec4, #7873f5, #42f5ef, #f5f542);
   background-size: 400% 400%;
@@ -165,7 +168,7 @@
 
 .nav-buttons a:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
 /* ---------------- KEYFRAMES ---------------- */
@@ -182,10 +185,11 @@
     align-items: center;
   }
 
-  .contact-form, .contact-info {
+  .contact-form,
+  .contact-info {
     width: 100%;
     max-width: 90%;
-    margin: 0;
+    margin: 0 auto; /* always center */
     text-align: center;
   }
 
