@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="contact-content d-flex flex-wrap justify-content-between">
 
           
-          <div className="contact-form flex-grow-1 me-4">
+          <div className="contact-form flex-grow-1 ">
             <form
               className="contact-form"
               action="mailto:Sivabhanuboda@gmail.com"

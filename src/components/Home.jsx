@@ -58,7 +58,7 @@ export default function Home() {
       <div className="hero-section container-fluid d-flex justify-content-center flex-wrap">
         
         <div className="section-image w-100 d-flex justify-content-center align-items-center">
-          <img className="rounded-circle" src="./images/image.png " alt="Profile" />
+          <img className="rounded-circle" src="./images/image1.png " alt="Profile" />
         </div>
 
        
