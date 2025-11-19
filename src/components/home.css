@@ -63,6 +63,8 @@
     border-radius: 50%;
     margin: 20px;
     object-fit: cover;
+    object-position: top;
+    background:local;
     border: 5px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -223,4 +225,36 @@
 
 @keyframes slideUp {
     to { opacity: 1; transform: translateY(0); }
+}.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* allows wrapping on small screens */
+    gap: 20px;             /* spacing between buttons */
+    width: 100%;
+    max-width: 700px;      /* optional max width */
+    margin-top: 30px;
+}
+
+.button-container button {
+    flex: 1;               /* all buttons have equal width */
+    min-width: 140px;      /* prevents buttons from being too small */
+    max-width: 160px;      /* prevents buttons from being too large */
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42f5f5, #f9d423);
+    background-size: 400% 400%;
+    animation: buttonGradient 6s ease infinite;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }

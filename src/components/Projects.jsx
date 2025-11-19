@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import "../components/projects.css";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function Projects() {
   return (
@@ -20,7 +21,7 @@ export default function Projects() {
         <div className="project-card">
           <img
             className="project-image"
-            src="https://th.bing.com/th/id/OIP.FOuCu_sI-_00uAir6qaBSQHaEv?w=242&h=180"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjfvv5CGQAvr-oC1nkQLvHY2ulKOs38gSCUw&s"
             alt="BMI Calculator"
           />
           <div className="project-title">BMI Calculator</div>
@@ -56,28 +57,31 @@ export default function Projects() {
           </a>
         </div>
 
+                <div className="project-card">
+          <img
+            className="project-image"
+            src="https://image.shutterstock.com/image-vector/portfolio-word-banner-vector-illustration-260nw-1200433627.jpg"
+            alt="Personal Portfolio"
+          />
+          <div className="project-title">Personal Portfolio</div>
+          <div className="project-desc">
+            Turning pixels into experiences—frontend development with purpose and precision
+          </div>
+          <a
+            href="https://portfolio-1-livid-phi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="project-button">Click here</button>
+          </a>
+        </div>
+                
+
       </div>
 
       
-      <div className="container probtn w-50 mt-5">
-        <div className="d-flex b1 justify-content-around">
-          <Link to="/" className="c1">
-            <div className=" d-flex justify-content-center">Home</div>
-          </Link>
-          <Link to="/about" className="c1">
-            <div className=" d-flex justify-content-center">About</div>
-          </Link>
-        </div>
+    <Navbar active="projects" />
 
-        <div className="d-flex b2 justify-content-around">
-          <Link to="/skills" className="c1">
-            <div className=" d-flex justify-content-center">Skills</div>
-          </Link>
-          <Link to="/contact" className="c1">
-            <div className=" d-flex justify-content-center">Contact</div>
-          </Link>
-        </div>
-      </div>
 
     </motion.div>
   );

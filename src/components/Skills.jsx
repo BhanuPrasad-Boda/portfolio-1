@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import '../components/skills.css';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import Navbar from "./Navbar";
 
 export default function Skills() {
   const [sample, setSample] = useState('bi bi-sun');
@@ -19,10 +20,10 @@ export default function Skills() {
   }
 
   const cards = [
-    { name: "HTML", img: "./images/html.png", percent: "90%" },
-    { name: "CSS", img: "./images/css.jpeg", percent: "85%" },
+    { name: "HTML", img: "./images/html-.jpeg", percent: "90%" },
+    { name: "CSS", img: "./images/css-.webp", percent: "85%" },
     { name: "JavaScript", img: "./images/js.jpeg", percent: "80%" },
-    { name: "React", img: "./images/react.jpeg", percent: "75%" },
+    { name: "React", img: "./images/react-.webp", percent: "75%" },
   ];
 
   return (
@@ -58,26 +59,12 @@ export default function Skills() {
             <div className="card-body">
               <img src={card.img} alt={card.name} />
             </div>
-            <div className="card-footer">{card.percent}</div>
+           
           </motion.div>
         ))}
       </div>
 
-      <motion.div
-        className='container w-100'
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        <div className='d-flex c1 justify-content-around'>
-          <Link className="link" to='/'><div className='nav-btn'>Home</div></Link>
-          <Link className="link" to='/about'><div className='nav-btn'>About</div></Link>
-        </div>
-        <div className='d-flex c2 justify-content-around'>
-          <Link className="link" to='/projects'><div className='nav-btn'>Projects</div></Link>
-          <Link className="link" to='/contact'><div className='nav-btn'>Contact</div></Link>
-        </div>
-      </motion.div>
+      <Navbar active="skills" />
     </motion.div>
   );
 }

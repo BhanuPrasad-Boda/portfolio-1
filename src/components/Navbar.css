@@ -1,0 +1,59 @@
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;   /* avoids interference with motion divs */
+    z-index: 10;
+}
+
+
+.navbar-container .nav-btn {
+    flex: 1;
+    min-width: 140px;
+    max-width: 160px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42f5f5, #f9d423);
+    background-size: 400% 400%;
+    animation: navButtonGradient 6s ease infinite;
+    transition: all 0.3s ease;
+}
+
+.navbar-container .nav-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.dark-mode .navbar-container .nav-btn {
+    background: linear-gradient(135deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    animation: navButtonGradient 6s ease infinite;
+}
+
+/* animation */
+@keyframes navButtonGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+    .navbar-container .nav-btn {
+        min-width: 120px;
+        max-width: 140px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../components/home.css';
 import { Link } from 'react-router-dom';
-
+import Navbar from "./Navbar";
 function Typewriter() {
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -66,15 +66,10 @@ export default function Home() {
           <Typewriter />
         </div>
 
+        <Navbar active="home" />
+
         
-        <div className="section-buttons w-100 d-flex justify-content-center align-items-center">
-          <div className="button-container container w-50">
-            <Link to='/about'><div className="col-6">About</div></Link>
-            <Link to='/skills'><div className="col-6">Skills</div></Link>
-            <Link to='/projects'><div className="col-6">Projects</div></Link>
-            <Link to='/contact'><div className="col-6">Contact</div></Link>
-          </div>
-        </div>
+
       </div>
     </div>
   );

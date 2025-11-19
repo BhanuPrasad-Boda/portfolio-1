@@ -1,5 +1,6 @@
 import '../components/about.css';
 import { motion } from 'framer-motion';
+import Navbar from './Navbar';
 
 import { Link } from 'react-router-dom';
 
@@ -40,12 +41,8 @@ export default function About() {
                 </p>
             </div>
 
-<div className='button-container'>
-    <Link to='/'><button>Home</button></Link>
-    <Link to='/skills'><button>Skills</button></Link>
-    <Link to='/projects'><button>Projects</button></Link>
-    <Link to='/contact'><button>Contact</button></Link>
-</div>
+<Navbar active="about" />
+
 
         </motion.div>
     );
