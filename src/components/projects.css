@@ -46,6 +46,7 @@
   height: 180px;
   border-radius: 15px;
   object-fit: cover;
+  object-position: center;
 }
 
 .project-title {

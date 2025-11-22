@@ -53,8 +53,9 @@ const Contact = () => {
           
           <div className="contact-info text-center">
             <h3>Get in Touch</h3>
-            <p>📧 <a href="mailto:Sivabhanuboda@gmail.com">Sivabhanuboda@gmail.com</a></p>
-            <p>📞 <a href="tel:+919014399400">+91 90143 99400</a></p>
+          <div className="d-flex justify-content-evenly"> <p> <a href="mailto:Sivabhanuboda@gmail.com" className="bi-envelope-at fs-3" ></a></p>
+            <p> <a href="tel:+919014399400" className="bi-telephone fs-3"></a></p>
+            <p><a href="https://wa.me/919014399400" className="bi-whatsapp fs-3"></a></p></div>
             <p>📍 Andhra Pradesh, India</p>
           </div>
           

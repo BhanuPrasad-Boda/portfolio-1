@@ -9,8 +9,8 @@ export default function Navbar({ active }) {
         { name: "about", path: "/about" },
         { name: "skills", path: "/skills" },
         { name: "projects", path: "/projects" },
-        { name: "contact", path: "/contact" },
         { name: "education", path: "/education" },
+        { name: "contact", path: "/contact" },
     ];
 
     return (
