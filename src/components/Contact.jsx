@@ -57,12 +57,13 @@ const Contact = () => {
             <p> <a href="tel:+919014399400" className="bi-telephone fs-3"></a></p>
             <p><a href="https://wa.me/919014399400" className="bi-whatsapp fs-3"></a></p></div>
             <p>📍 Andhra Pradesh, India</p>
+          <Navbar active={['contact','home','skills','about','projects','education']} />
           </div>
           
         </div>
 
         
-        <Navbar active="contact" />
+        <Navbar active={['contact','resume']} className='resume-btn' />
 
       </div>
     </div>

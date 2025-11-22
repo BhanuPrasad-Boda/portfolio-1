@@ -209,7 +209,19 @@
     font-size: 14px;
   }
 }
-.contact-info p {
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 28px;
+  }
 
+  .contact-form button,
+  .nav-buttons a {
+    height: 50px;
+    font-size: 14px;
+  }
+  @keyframes navButtonGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-
+}

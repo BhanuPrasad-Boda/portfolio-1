@@ -41,7 +41,7 @@ export default function About() {
                 </p>
             </div>
 
-<Navbar active="about" />
+<Navbar active={['about','resume']} />
 
 
         </motion.div>

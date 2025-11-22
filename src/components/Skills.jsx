@@ -64,7 +64,7 @@ export default function Skills() {
         ))}
       </div>
 
-      <Navbar active="skills" />
+      <Navbar active={['skills','resume']} />
     </motion.div>
   );
 }

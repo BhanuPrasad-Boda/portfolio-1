@@ -80,7 +80,7 @@ export default function Projects() {
       </div>
 
       
-    <Navbar active="projects" />
+    <Navbar active={['projects','resume']} />
 
 
     </motion.div>

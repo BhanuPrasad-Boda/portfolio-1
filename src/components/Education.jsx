@@ -35,7 +35,7 @@ export default function Education() {
                 <p><b>Year:</b> 2018 – 2019</p>
             </div>
 
-            <Navbar active="education" />
+            <Navbar active={['education','resume']} />
 
         </motion.div>
     );
