@@ -11,7 +11,7 @@ export default function Navbar({ active=[] }) {
         { name: "projects", path: "/projects" },
         { name: "education", path: "/education" },
         { name: "contact", path: "/contact" },
-        { name: "resume", path: "/contact/resume" },
+        { name: "resume", path: "/resume" },
     ];
 
     return (
