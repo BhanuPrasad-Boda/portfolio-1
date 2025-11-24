@@ -60,7 +60,7 @@ export default function Projects() {
                 <div className="project-card">
           <img
             className="project-image"
-            src="https://image.shutterstock.com/image-vector/portfolio-word-banner-vector-illustration-260nw-1200433627.jpg"
+            src="/images/port12.png"
             alt="Personal Portfolio"
           />
           <div className="project-title">Personal Portfolio</div>

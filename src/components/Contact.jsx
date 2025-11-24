@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import CheckBoxBackground from "./CheckBoxBackground";
-import BackgroundBlob from "./BackgroundBlob";
+
 import { Link } from "react-router-dom";
 import "./Contact.css";
 import Navbar from "./Navbar";
-import ContactBackground from "./ContactBackground";
+
 import ContactWaveBackground from "./ContactWaveBackground";
 
 
