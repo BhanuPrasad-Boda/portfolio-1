@@ -41,7 +41,7 @@ export default function Projects() {
         <div className="project-card">
           <img
             className="project-image"
-            src="https://th.bing.com/th/id/OIP.opB25csDZbkdrDPey1ZqNgHaEK?w=264&h=180"
+            src="https://clickup.com/blog/wp-content/uploads/2019/01/to-do-list-apps-1400x1050.png"
             alt="To-Do App"
           />
           <div className="project-title">To-Do Application</div>

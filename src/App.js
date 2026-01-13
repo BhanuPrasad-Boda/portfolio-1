@@ -1,21 +1,33 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import './App.css';
-import Resume from './components/Resume';
+import Resume from "./components/Resume";
 import Education from "./components/Education";
+import Loader from "./components/Loader";
+
+import "./App.css";
 
 function App() {
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // loader duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loading ? (
+    <Loader />
+  ) : (
     <Router>
       <div>
-
-
-
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
