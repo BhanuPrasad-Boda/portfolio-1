@@ -5,7 +5,7 @@ import React from "react";
 import "./Contact.css";
 import Navbar from "./Navbar";
 
-import ContactWaveBackground from "./ContactWaveBackground";
+
 
 
 
@@ -17,7 +17,7 @@ const Contact = () => {
     <div className={` contact-page`}>
 
       
-      <ContactWaveBackground />
+      
 
       <div className="contact-container">
         <h2 className="contact-title" style={{ fontFamily: "Times New Roman" }}>
