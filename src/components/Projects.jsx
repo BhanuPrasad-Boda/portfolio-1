@@ -49,7 +49,7 @@ export default function Projects() {
             A productivity To-Do List app built with React.js to organize daily tasks.
           </div>
           <a
-            href="https://to-do-app-5wyo-bhanuprasad-bodas-projects.vercel.app/"
+            href="https://to-do-project-react-one.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
