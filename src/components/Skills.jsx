@@ -1,23 +1,14 @@
 import { motion } from "framer-motion";
 import '../components/skills.css';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+
 import Navbar from "./Navbar";
 
 export default function Skills() {
-  const [sample, setSample] = useState('bi bi-sun');
-  const [mode, setMode] = useState('');
+
   const [activeCard, setActiveCard] = useState(null);
 
-  function handleclick(e) {
-    if(sample==='bi bi-sun'){
-      setSample('bi bi-moon-fill')
-      setMode('dark-mode')
-    } else {
-      setSample('bi bi-sun')
-      setMode('')
-    }
-  }
+
 
   const cards = [
     { name: "HTML", img: "./images/html-.jpeg", percent: "90%" },
@@ -28,7 +19,7 @@ export default function Skills() {
 
   return (
     <motion.div 
-      className={`${mode} skills-bg  `} 
+      className={` skills-bg  `} 
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}

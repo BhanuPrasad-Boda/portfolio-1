@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Link } from "react-router-dom";
+
+
 import "./Contact.css";
 import Navbar from "./Navbar";
 
@@ -9,21 +10,11 @@ import ContactWaveBackground from "./ContactWaveBackground";
 
 
 const Contact = () => {
-  const [sample, setSample] = useState("bi bi-sun");
-  const [mode, setMode] = useState("");
 
-  function handleclick() {
-    if (sample === "bi bi-sun") {
-      setSample("bi bi-moon-fill");
-      setMode("dark-mode");
-    } else {
-      setSample("bi bi-sun");
-      setMode("");
-    }
-  }
+
 
   return (
-    <div className={`${mode} contact-page`}>
+    <div className={` contact-page`}>
 
       
       <ContactWaveBackground />
@@ -58,9 +49,9 @@ const Contact = () => {
           
           <div className="contact-info text-center">
             <h3>Get in Touch</h3>
-          <div className="d-flex justify-content-evenly"> <p> <a href="mailto:Sivabhanuboda@gmail.com" className="bi-envelope-at fs-3" ></a></p>
-            <p> <a href="tel:+919014399400" className="bi-telephone fs-3"></a></p>
-            <p><a href="https://wa.me/919014399400" className="bi-whatsapp fs-3"></a></p></div>
+          <div className="d-flex justify-content-evenly"> <p> <a href="mailto:Sivabhanuboda@gmail.com" className="bi-envelope-at fs-3" > </a></p>
+            <p> <a href="tel:+919014399400" className="bi-telephone fs-3"> </a></p>
+            <p><a href="https://wa.me/919014399400" className="bi-whatsapp fs-3"> </a></p></div>
             <p>📍 Andhra Pradesh, India</p>
           <Navbar active={['contact','home','skills','about','projects','education']} />
           </div>

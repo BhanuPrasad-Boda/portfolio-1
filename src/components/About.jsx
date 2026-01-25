@@ -2,7 +2,7 @@ import '../components/about.css';
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 
-import { Link } from 'react-router-dom';
+
 
 export default function About() {
 
