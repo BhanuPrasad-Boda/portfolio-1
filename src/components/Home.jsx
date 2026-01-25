@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../components/home.css';
-import { Link } from 'react-router-dom';
+
 import Navbar from "./Navbar";
 function Typewriter() {
   const getGreeting = () => {
@@ -37,21 +37,11 @@ function Typewriter() {
 }
 
 export default function Home() {
-  const [sample, setSample] = useState('bi bi-sun');
-  const [mode, setMode] = useState('');
 
-  function handleclick() {
-    if(sample === 'bi bi-sun'){
-      setSample('bi bi-moon-fill');
-      setMode('dark-mode');
-    } else {
-      setSample('bi bi-sun');
-      setMode('');
-    }
-  }
+
 
   return (
-    <div className={`home ${mode}`}>
+    <div className={`home `}>
       
 
 

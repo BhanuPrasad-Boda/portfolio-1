@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import "../components/projects.css";
-import { Link } from "react-router-dom";
+
 import Navbar from "./Navbar";
 
 export default function Projects() {
